@@ -28,7 +28,7 @@
 @implementation JUCollectionView
 @synthesize cellSize, desiredNumberOfColumns, desiredNumberOfRows;
 @synthesize dataSource, delegate;
-@synthesize unselectOnMouseUp, allowsSelection, allowsMultipleSelection;
+@synthesize unselectOnMouseUp, allowsSelection, allowsMultipleSelection, allowsReorderAnimation;
 
 #pragma mark -
 #pragma mark Selection
@@ -410,7 +410,7 @@
     // Update the frame and then all cells
     [super setFrame:frame];
     
-    [self reorderCellsAnimated:YES];
+    [self reorderCellsAnimated:allowsReorderAnimation];
     [self removeInvisibleCells];
     [self addMissingCells];
 }

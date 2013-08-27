@@ -90,6 +90,10 @@
  * YES if the collection view should deselect the currently selected cell when the mouse button is released. The default value is NO.
  **/
 @property (nonatomic, assign) BOOL unselectOnMouseUp;
+/**
+ * Enable / Disable animation on reorder items
+ **/
+@property (nonatomic, assign) BOOL allowsReorderAnimation;
 
 /**
  * Returns a queued cell or nil if no cell is currently in the queue. Use this if possible instead of creating new JUCollectionViewCell instances. 
