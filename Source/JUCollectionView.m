@@ -182,6 +182,7 @@
     return NSMakePoint(x, y);
 }
 
+
 - (NSRect)rectForCellAtIndex:(NSInteger)index
 {
     if(index >= numberOfCells || index == NSNotFound)
@@ -190,7 +191,10 @@
     NSUInteger x = index % numberOfColumns;
     NSUInteger y = (index - x) / numberOfColumns;
     
-    return NSMakeRect(x * cellSize.width, y * cellSize.height, cellSize.width, cellSize.height);
+    // implement Responsive layout
+    NSUInteger width =  MIN(MAX(cellSize.width, NSWidth(self.frame) / MAX(1,numberOfColumns) * 1.00), self.cellMaxSize.width);
+    
+    return NSMakeRect(x * width, y * cellSize.height, width, cellSize.height);
 }
 
 - (NSIndexSet *)indexesOfCellsInRect:(NSRect)rect

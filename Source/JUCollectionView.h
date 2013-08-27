@@ -53,6 +53,8 @@
  * The size of one cell. Each cell shares the very same size.
  **/
 @property (nonatomic, assign) NSSize cellSize;
+
+@property (nonatomic, assign) NSSize cellMaxSize;
 /**
  * The number of columns the collection view should use, or NSUIntegerMax to let the collection view decide what column number fits best.
  **/
