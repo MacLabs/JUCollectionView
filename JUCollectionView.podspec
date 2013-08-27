@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/MacLabs/JUCollectionView"
   s.license      = 'LICENCE*.*'
   s.author       = { "Sidney Just" => "sidney.just@gmail.com" }
-  s.source       = { :git => "https://github.com/MacLabs/JUCollectionView.git" }
+  s.source       = { :git => "https://github.com/MacLabs/JUCollectionView.git", :tag => "0.0.2" }
   s.platform     = :osx
   s.source_files = 'Source/**/*.{h,m}'
   s.public_header_files = 'Source/**/*.h'
